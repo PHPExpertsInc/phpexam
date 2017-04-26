@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('home');
 });
+
+Route::get('/quiz/{quiz}', 'QuizController@show')->where('file', '[a-zA-Z0-9\_\-]');

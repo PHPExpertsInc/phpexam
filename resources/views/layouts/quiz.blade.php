@@ -1,0 +1,4 @@
+<?php
+
+@section('quiz')
+@stop

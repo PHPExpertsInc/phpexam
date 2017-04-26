@@ -16,13 +16,13 @@
 <div class="col_12">
     <div class="col_6">
         <h4>Beginner Quiz</h4>
-        <p><a class="button blue large" href="/quiz/beginner.html">Start <i class="fa fa-forward"></i></a></p>
+        <p><a class="button blue large" href="/quiz/beginner">Start <i class="fa fa-forward"></i></a></p>
         <p>This quiz targets junior developers with <strong>0 to 2 years</strong> of experience.</p>
     </div>
 
     <div class="col_6">
         <h4>Intermediate Quiz</h4>
-        <p><a class="button blue large" href="/quiz/intermediate.html">Start <i class="fa fa-forward"></i></a></p>
+        <p><a class="button blue large" href="/quiz/intermediate">Start <i class="fa fa-forward"></i></a></p>
         <p>This quiz targets junior and mid-level developers with <strong>2 to 3 years</strong> of experience.</p>
     </div>
 </div>
@@ -30,13 +30,13 @@
 <div class="col_12">
     <div class="col_6">
         <h4>Intermediate+ Quiz</h4>
-        <p><a class="button blue large" href="/quiz/intermediate+.html">Start <i class="fa fa-forward"></i></a></p>
+        <p><a class="button blue large" href="/quiz/intermediate-plus">Start <i class="fa fa-forward"></i></a></p>
         <p>This quiz targets mid-level developers with <strong>3 to 5 years</strong> of experience.</p>
     </div>
 
     <div class="col_6">
         <h4>Senior Quiz</h4>
-        <p><a class="button blue large" href="/quiz/senior.html">Start <i class="fa fa-forward"></i></a></p>
+        <p><a class="button blue large" href="/quiz/senior">Start <i class="fa fa-forward"></i></a></p>
         <p>This quiz targets senior developers with <strong>5+ years</strong> of experience.</p>
     </div>
 </div>
