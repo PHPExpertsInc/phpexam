@@ -11,6 +11,7 @@
 <hr />
 <form method="post" action="/submission">
     {{ csrf_field() }}
+    <input type="hidden" name="quiz" value="beginner"/>
     <div class="col_12">
         <div>
         Email: <input type="email" name="email" size="35"/>&nbsp;<input type="number" name="pin" maxlength="4" size="4"/>
@@ -22,11 +23,11 @@
                     {!! $question !!}
                     <textarea name="answers[{{$questionId}}]" style="width: 600px"></textarea>
                 </li>
-
             @endforeach
         </ol>
         <input type="submit" name="take_exam" value="Submit"/>
     </div>
-
 </form>
 @stop
+
+
