@@ -15,8 +15,8 @@
                 <option disabled="disabled"> -- SELECT -- </option>
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
-                <option value="intermediatePlus">Intermediate Plus</option>
-                <option value="advanced">Advanced</option>
+                <option value="intermediate-plus">Intermediate Plus</option>
+                <option value="senior">Advanced</option>
             </select>
         </div>
         <div>

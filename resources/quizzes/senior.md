@@ -20,6 +20,6 @@
 
 "What is the Strategy Pattern?",
 
-"What is the Command Pattern?
+"What is the Command Pattern?"
 
 ]
