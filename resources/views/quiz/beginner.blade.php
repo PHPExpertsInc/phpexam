@@ -9,16 +9,24 @@
     a career in PHP.
     </p>
 <hr />
+<form method="post" action="/submission">
+    {{ csrf_field() }}
+    <div class="col_12">
+        <div>
+        Email: <input type="email" name="email" size="35"/>&nbsp;<input type="number" name="pin" maxlength="4" size="4"/>
 
-<div class="col_12">
-    <ol>
-        @foreach($questions as $questionId => $question)
-            <li>
-                {!! $question !!}
-                <textarea name="question{{$questionId + 1}}" style="width: 600px"></textarea>
-            </li>
+        </div>
+        <ol>
+            @foreach($questions as $questionId => $question)
+                <li>
+                    {!! $question !!}
+                    <textarea name="answers[{{$questionId}}]" style="width: 600px"></textarea>
+                </li>
 
-        @endforeach
-    </ol>
-</div>
+            @endforeach
+        </ol>
+        <input type="submit" name="take_exam" value="Submit"/>
+    </div>
+
+</form>
 @stop

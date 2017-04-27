@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="" />
     <meta name="copyright" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
     <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />                          <!-- CUSTOM STYLES -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -50,7 +51,7 @@
                 <li><a target="_blank" href="http://www.phpu.cc/books/phppro/">PHP Beginner To Pro</a></li>
             </ul>
 
-            <h5><a style="text-decoration: dotted !important; color: black" href="http://www.phpexperts.pro/">PHP Experts.pro</a></h5>
+            <h5><a style="text-decoration: dotted !important; color: black" href="#">PHP Quiz</a></h5>
             <i class="fa fa-twitter-square fa-3x"></i>
             <i class="fa fa-facebook-square fa-3x"></i>
             <i class="fa fa-linkedin-square fa-3x"></i>
