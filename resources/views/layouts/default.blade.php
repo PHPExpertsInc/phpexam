@@ -56,7 +56,7 @@
             <i class="fa fa-linkedin-square fa-3x"></i>
             <i class="fa fa-github-square fa-3x"></i>
 
-            <h5>Button w/Icon</h5>
+            <p><a class="button red medium" href="/submissions">View My Results</a></p>
             <a class="button orange small" href="#"><i class="fa fa-rss"></i> Donate</a>
         </div>
 

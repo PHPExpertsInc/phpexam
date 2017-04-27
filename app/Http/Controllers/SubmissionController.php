@@ -5,11 +5,29 @@ namespace App\Http\Controllers;
 use App\Models\Quiz;
 use App\Models\Submission;
 use Illuminate\Http\Request;
-use ParsedownExtra;
-use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class SubmissionController extends Controller
 {
+    public function index()
+    {
+        return response()->view('submission');
+    }
+
+    public function show(Request $request)
+    {
+        // 1. Get the basic inputs.
+        $quizName = $request->input('quiz');
+        $email = $request->input('email');
+        $pin = $request->input('pin');
+
+        // 2. Load the submission.
+        $submission = Submission::find($quizName, $email, $pin);
+
+        return response()->view('submission', [
+            'submission' => $submission->getHtml(),
+        ]);
+    }
+
     public function save(Request $request)
     {
         // 1. Get the basic inputs.

@@ -17,4 +17,6 @@ Route::get('/', function() {
 
 Route::get('/quiz/{quiz}', 'QuizController@show')->where('file', '[a-zA-Z0-9\_\-]');
 
+Route::get('/submissions', 'SubmissionController@index');
+Route::post('/viewSubmission', 'SubmissionController@show');
 Route::post('/submission', 'SubmissionController@save');

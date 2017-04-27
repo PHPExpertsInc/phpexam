@@ -9,8 +9,7 @@ class QuizController extends Controller
     public function show($quizName)
     {
         $quiz = Quiz::find($quizName);
-
-        return view('quiz.beginner', [
+        return view("quiz.$quizName", [
             'questions' => $quiz->getHtmlQuestions(),
         ]);
     }
