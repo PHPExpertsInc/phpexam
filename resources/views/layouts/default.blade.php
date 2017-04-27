@@ -51,7 +51,6 @@
                 <li><a target="_blank" href="http://www.phpu.cc/books/phppro/">PHP Beginner To Pro</a></li>
             </ul>
 
-            <h5><a style="text-decoration: dotted !important; color: black" href="#">PHP Quiz</a></h5>
             <i class="fa fa-twitter-square fa-3x"></i>
             <i class="fa fa-facebook-square fa-3x"></i>
             <i class="fa fa-linkedin-square fa-3x"></i>
