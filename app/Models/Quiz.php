@@ -6,19 +6,23 @@ use ParsedownExtra;
 
 class Quiz
 {
+    /** @var string */
+    protected $name;
+
     /** @var array */
     protected $questions;
 
     /** @var ParsedownExtra */
     protected $parsedown;
 
-    public function __construct(array $questions = [], ParsedownExtra $parsedown = null)
+    public function __construct($quizName, array $questions = [], ParsedownExtra $parsedown = null)
     {
         if (!$parsedown) {
             $parsedown = new ParsedownExtra();
         }
         $this->parsedown = $parsedown;
 
+        $this->name = $quizName;
         $this->questions = $questions;
     }
 
@@ -37,9 +41,17 @@ class Quiz
         $questions = json_decode($quizContents);
 
         // 4. Return a new Quiz object.
-        $quiz = new self($questions);
+        $quiz = new self($quizName, $questions);
 
         return $quiz;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     public function getTextQuestions()

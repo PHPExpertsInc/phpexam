@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Quiz;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 use ParsedownExtra;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -22,27 +23,10 @@ class SubmissionController extends Controller
         // 3. Get the user's answers.
         $answers = $request->input('answers');
 
-        // 4. Hash the submission's file name.
-        $submissionPath = storage_path('submissions');
-        $submissionFile = $submissionPath . '/' . preg_replace('/[^a-zA-Z0-9_.]/', '', $quizName) . '-' . md5("$email$pin") . '.md';
+        // 4. Save the submission.
+        $submission = new Submission($quiz, $answers);
+        $submission->save($email, $pin);
 
-        // 5. Combine the questions with the answers.
-        $submission = '';
-        foreach ($quiz->getTextQuestions() as $i => $question) {
-            $quotedAnswer = preg_replace('/^/m', '> ', $answers[$i]);
-            $submission .= <<<TEXT
-$question
-
-$quotedAnswer
------
-
-TEXT;
-        }
-
-        // 6. Save the submission.
-        if (!is_writable($submissionPath)) {
-            throw new FileException("Cannot write to '$submissionFile'.");
-        }
-        file_put_contents($submissionFile, $submission);
+        return response()->view('thank_you');
     }
 }
