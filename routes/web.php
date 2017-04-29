@@ -18,5 +18,10 @@ Route::get('/', function() {
 Route::get('/quiz/{quiz}', 'QuizController@show')->where('file', '[a-zA-Z0-9\_\-]');
 
 Route::get('/submissions', 'SubmissionController@index');
-Route::post('/viewSubmission', 'SubmissionController@show');
+Route::get('/submission/{submissionId}', 'SubmissionController@showById');
 Route::post('/submission', 'SubmissionController@save');
+Route::post('/submission/view', 'SubmissionController@show');
+
+Route::get('/submission/grade/{submissionId}', 'SubmissionController@showForGrading');
+Route::post('/submission/grade/{submissionId}', 'SubmissionController@grade');
+

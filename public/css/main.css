@@ -153,3 +153,17 @@ border:5px solid #ddd;
 margin:30px 0;
 display:block;
 }
+
+.wrong {
+	background-image: url('/images/wrong.png');
+}
+
+.correct {
+	background-image: url('/images/correct.png');
+}
+
+.explanation {
+	padding: 10px;
+	background: #faf2cc;
+	color: red !important;
+}

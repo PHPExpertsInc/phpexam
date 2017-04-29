@@ -5,7 +5,7 @@
 <p><img class="align-left" src="/images/php-logo.jpg" width="250" height="140" />
 <p>View your results!</p>
 
-<form method="post" action="/viewSubmission">
+<form method="post" action="/submission/view">
     {{ csrf_field() }}
     <input type="hidden" name="quiz" value="beginner"/>
     <div class="col_12">
